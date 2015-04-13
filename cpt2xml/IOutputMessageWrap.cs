@@ -11,6 +11,6 @@ namespace cpt2xml
         /// Show text message
         /// </summary>
         /// <param name="message">Message text</param>
-        public void Show(string message);
+        void Show(string message);
     }
 }

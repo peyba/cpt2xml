@@ -22,7 +22,7 @@ namespace cpt2xml
             /* help */
             if (config.NeedShowHelp)
             {
-                config.NeedShowHelp();
+                config.ShowHelp();
                 return;
             }
 
@@ -157,7 +157,7 @@ namespace cpt2xml
                             libData.AddRange(buffer);
                         }
 
-                        return Assembly.Load(buffer);
+                        return Assembly.Load(libData.ToArray());
                     }
                 }
             }

@@ -12,7 +12,7 @@ namespace cpt2xml
         private string outFile = String.Empty;
         private string entityName = String.Empty;
         private bool showHelp = false;
-        private string[] columnsArray;
+        private string[] columnsArray = new string[0];
         private OptionSet configOptionsSet;
 	    #endregion // Fields
 
@@ -88,7 +88,7 @@ namespace cpt2xml
                 },
    	            {
                     "c|columns=",
-                    "column names, separated by comma",
+                    "column names, separated by comma (,)",
                     v => this.columnsArray = ParceColumnsLine(v)
                 },
                 {
@@ -115,7 +115,7 @@ namespace cpt2xml
 
         private string[] ParceColumnsLine(string columnsLine)
         {
-            return columnsLine.Split(','); ;
+            return columnsLine.Split(',');
         }
         #endregion // Methods
     }
